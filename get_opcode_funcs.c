@@ -21,6 +21,7 @@ void get_opcode_funcs(stack_t **stack, unsigned int line_num, char *token)
 		{"nop", _nop},
 		{"sub", _sub},
 		{"div", _div},
+		{"mul", _mul},
 		{NULL, NULL}
 	};
 
