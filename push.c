@@ -36,6 +36,7 @@ void _push(stack_t **stack, unsigned int line_num)
 	if (new == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: malloc failed\n");
+		free(*stack);
 		exit(EXIT_FAILURE);
 	}
 	new->next = NULL;
