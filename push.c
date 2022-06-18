@@ -12,7 +12,6 @@ void _push(stack_t **stack, unsigned int line_num)
 	size_t i, len;
 	char val[128] = "";
 	char *value = val;
-	stack_t *new;
 
 	value = strtok(NULL, " \t\r\n\v\f");
 	if (value == NULL)
@@ -32,21 +31,9 @@ void _push(stack_t **stack, unsigned int line_num)
 			exit(EXIT_FAILURE);
 		}
 	}
-	new = malloc(sizeof(stack_t));
-	if (new == NULL)
-	{
-		dprintf(STDERR_FILENO, "Error: malloc failed\n");
-		free(*stack);
-		exit(EXIT_FAILURE);
-	}
-	new->next = NULL;
-	new->n = atoi(value);
-	if (*stack == NULL)
-		new->prev = NULL;
+
+	if (stack_type == 's')
+		push_s(stack, atoi(value));
 	else
-	{
-		new->prev = *stack;
-		(*stack)->next = new;
-	}
-	*stack = new;
+		push_q(stack, atoi(value));
 }

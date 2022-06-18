@@ -39,6 +39,9 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/* Global variables */
+extern char stack_type;
+
 /* utils */
 void get_opcode_funcs(stack_t **stack, unsigned int line_num, char *token);
 void free_stack(stack_t *stack);
@@ -59,5 +62,11 @@ void _pchar(stack_t **stack, unsigned int line_num);
 void _pstr(stack_t **stack, unsigned int line_num);
 void _rotl(stack_t **stack, unsigned int line_num);
 void _rotr(stack_t **stack, unsigned int line_num);
+void _queue(stack_t **stack, unsigned int line_num);
+void _stack(stack_t **stack, unsigned int line_num);
+
+/* push helpers, stack and queue */
+void push_q(stack_t **stack, int data);
+void push_s(stack_t **stack, int data);
 
 #endif

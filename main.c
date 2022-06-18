@@ -1,5 +1,7 @@
 #include "monty.h"
 
+char stack_type = 's';
+
 /**
  * main - entry point, see code
  * @argc: number of commands passed
