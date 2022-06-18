@@ -16,7 +16,7 @@ void _pop(stack_t **stack, unsigned int line_num)
 		dprintf(STDERR_FILENO, "L%d: can't pop an empty stack\n", line_num);
 		exit(EXIT_FAILURE);
 	}
-	
+
 	temp = (*stack)->prev;
 	free(*stack);
 	*stack = temp;
