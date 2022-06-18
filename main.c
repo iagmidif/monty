@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
 	unsigned int line_num = 1;
 	char *line_buf = NULL;
 	size_t line_len = 0;
-	char *token;
-	stack_t *stack;
+	char *token = NULL;
+	stack_t *stack = NULL;
 
 	if (argc != 2)
 	{
