@@ -25,6 +25,7 @@ void get_opcode_funcs(stack_t **stack, unsigned int line_num, char *token)
 		{"mod", _mod},
 		{"pchar", _pchar},
 		{"pstr", _pstr},
+		{"rotl", _rotr},
 		{NULL, NULL}
 	};
 
