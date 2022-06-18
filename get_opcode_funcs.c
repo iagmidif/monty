@@ -14,6 +14,7 @@ void get_opcode_funcs(stack_t **stack, unsigned int line_num, char *token)
 	instruction_t opcode_func[] = {
 		{"push", _push},
 		{"pall", _pall},
+		{"pint", _pint},
 		{NULL, NULL}
 	};
 
