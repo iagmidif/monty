@@ -14,7 +14,7 @@ void _push(stack_t **stack, unsigned int line_num)
 	char *value = val;
 	stack_t *new;
 
-	value = strtok(NULL, " \t\r\n");
+	value = strtok(NULL, " \t\r\n\v\f");
 	if (value == NULL)
 	{
 		dprintf(STDERR_FILENO, "L%u: usage: push integer\n", line_num);

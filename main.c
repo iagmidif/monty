@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
 	while (getline(&line_buf, &line_len, fp) != -1)
 	{
-		token = strtok(line_buf, " \t\r\n");
+		token = strtok(line_buf, " \t\r\n\v\f");
 		if (token != NULL && token[0] != '#')
 			get_opcode_funcs(&stack, line_num, token);
 		line_num++;
