@@ -3,7 +3,7 @@
 /**
  * _rotl - rotates the stack to the top
  * @stack: double pointer to the top of the stack
- * @line_number: line number of the code
+ * @line_num: line number of the code
  *
  * Return: void, nth
  */

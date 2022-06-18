@@ -3,7 +3,7 @@
 /**
  * _rotr - rotates the stack to the bottom
  * @stack: double pointer to the top of the stack
- * @line_number: line number of the code
+ * @line_num: line number of the code
  *
  * Return: void, nth
  */
@@ -19,11 +19,11 @@ void _rotr(stack_t **stack, unsigned int line_num)
 	while ((*stack)->prev != NULL)
 		*stack = (*stack)->prev;
 	bottom = *stack;
-	
+
 	bottom->next->prev = NULL;
 	bottom->next = NULL;
 	bottom->prev = top;
 	top->next = bottom;
 
-	*stack = bottom;;
+	*stack = bottom;
 }
